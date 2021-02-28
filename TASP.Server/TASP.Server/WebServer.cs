@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -8,21 +9,23 @@ using System.Threading.Tasks;
 
 namespace TASP.Server
 {
-    internal class WebServer : IServer
+    public class WebServer : IServer
     {
-        private readonly TcpListener _listener;
+        private readonly HttpListener _listener;
 
         public WebServer(string ip, int port)
         {
-            var ipAddress = IPAddress.Parse(ip);
-            _listener = new TcpListener(ipAddress, port);
+            _listener = new HttpListener();
+            _listener.Prefixes.Add($"http://localhost:13000/");
         }
 
         public void Start()
         {
             _listener.Start();
 
-            StartListetingForClients();
+            var listenerThread = new Thread(async () => await StartListetingForClients().ConfigureAwait(false));
+
+            listenerThread.Start();
         }
 
         private async Task StartListetingForClients()
@@ -32,13 +35,12 @@ namespace TASP.Server
                 while (true)
                 {
                     Console.WriteLine("Waiting for client..");
-                    var client = await _listener.AcceptTcpClientAsync().ConfigureAwait(false);
-                    Console.WriteLine($"Client connected: {client}");
+                    var clientContext = await _listener.GetContextAsync().ConfigureAwait(false);
+                    Console.WriteLine($"Client connected: {clientContext}");
 
-                    ThreadPool.QueueUserWorkItem(_ =>
-                    {
-                        HandleClient(client);   
-                    });
+                    Task.Run(async () => await HandleClient(clientContext).ConfigureAwait(false));
+
+                    Console.WriteLine("Thread Started");
                 }
             }
             catch (Exception e)
@@ -46,22 +48,9 @@ namespace TASP.Server
             }
         }
 
-        private async Task HandleClient(TcpClient client)
+        private async Task HandleClient(HttpListenerContext client)
         {
-            var stream = client.GetStream();
-
-            string data = null;
-
-            var bytes = new byte[256];
-
-            var read = 0;
-
-            while ((read = await stream.ReadAsync(bytes).ConfigureAwait(false)) != 0)
-            {
-                data = Encoding.ASCII.GetString(bytes);
-
-                Console.WriteLine(data);
-            }
+            Console.WriteLine(client.Request.HttpMethod);
         }
 
         public void Stop()

@@ -1,4 +1,9 @@
 ﻿using System;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading;
+using TASP.Server;
 
 namespace ServerDemo
 {
@@ -6,7 +11,21 @@ namespace ServerDemo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var server = new WebServer("127.0.0.1", 13000);
+
+            server.Start();
+
+            var thread = new Thread(() =>
+            {
+                while (true)
+                {
+
+                }
+            });
+
+            thread.IsBackground = false;
+
+            thread.Start();
         }
     }
 }

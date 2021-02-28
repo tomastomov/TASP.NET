@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TASP.Server", "TASP.Server\TASP.Server.csproj", "{FA821093-9B1F-406D-B3B4-3F85B3EB53F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerDemo", "ServerDemo\ServerDemo.csproj", "{F6B7C7C8-4BE9-47E9-A80D-632B7D9C1C41}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
