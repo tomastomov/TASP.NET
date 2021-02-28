@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30711.63
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TASP.Server", "TASP.Server\TASP.Server.csproj", "{FA821093-9B1F-406D-B3B4-3F85B3EB53F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA821093-9B1F-406D-B3B4-3F85B3EB53F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA821093-9B1F-406D-B3B4-3F85B3EB53F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA821093-9B1F-406D-B3B4-3F85B3EB53F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA821093-9B1F-406D-B3B4-3F85B3EB53F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6581259-3BB4-4835-8380-AC364A25C1C5}
+	EndGlobalSection
+EndGlobal
