@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TASP.Server", "TASP.Server\TASP.Server.csproj", "{FA821093-9B1F-406D-B3B4-3F85B3EB53F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TASP.Server", "TASP.Server\TASP.Server.csproj", "{FA821093-9B1F-406D-B3B4-3F85B3EB53F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerDemo", "ServerDemo\ServerDemo.csproj", "{F6B7C7C8-4BE9-47E9-A80D-632B7D9C1C41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerDemo", "ServerDemo\ServerDemo.csproj", "{B747FAAB-6108-46C9-BF98-8E6ACA66DF06}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{FA821093-9B1F-406D-B3B4-3F85B3EB53F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA821093-9B1F-406D-B3B4-3F85B3EB53F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA821093-9B1F-406D-B3B4-3F85B3EB53F0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F6B7C7C8-4BE9-47E9-A80D-632B7D9C1C41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F6B7C7C8-4BE9-47E9-A80D-632B7D9C1C41}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F6B7C7C8-4BE9-47E9-A80D-632B7D9C1C41}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F6B7C7C8-4BE9-47E9-A80D-632B7D9C1C41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B747FAAB-6108-46C9-BF98-8E6ACA66DF06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B747FAAB-6108-46C9-BF98-8E6ACA66DF06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B747FAAB-6108-46C9-BF98-8E6ACA66DF06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B747FAAB-6108-46C9-BF98-8E6ACA66DF06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
